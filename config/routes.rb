@@ -1,6 +1,9 @@
+
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'users/show'
+  get 'static_pages/home'
+  root 'static_pages#home'
+  devise_for :users
   resources :books
-  get 'books/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
